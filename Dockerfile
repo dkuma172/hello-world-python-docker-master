@@ -19,8 +19,8 @@ RUN pip install -r requirements.txt
 # Copies all files from the current directory on your host to `/service` in the container
 COPY . ./
 
-#port 8989
-EXPOSE 8989
+#port 8080
+EXPOSE 8080
 
 #execute during container creation
 ENTRYPOINT ["python3", "app.py"]
