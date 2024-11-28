@@ -16,8 +16,10 @@ COPY requirements.txt .
 # run during image creation
 RUN pip install -r requirements.txt
 
-# COPY . ./
+# Copies all files from the current directory on your host to `/service` in the container
+COPY . ./
 
+#port 8989
 EXPOSE 8989
 
 #execute during container creation
