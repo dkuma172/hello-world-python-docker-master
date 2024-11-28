@@ -16,7 +16,7 @@ COPY requirements.txt .
 # run during image creation
 RUN pip install -r requirements.txt
 
-# Copies all files from the current directory on your host to `/service` in the container
+# Copies all files from the current directory on host to `/service` in the container
 COPY . ./
 
 #port 8080
