@@ -1,17 +1,24 @@
 #base image
 FROM python:3-alpine
 
-MAINTAINER Codaming
+#code maintained by
+MAINTAINER Dinesh
+
+#label
+LABEL BASE_IMAGE="python"
+LABEL PYTHON_VERSION="3"
 
 WORKDIR /service
 
+#copy from local
 COPY requirements.txt .
 
 # run during image creation
 RUN pip install -r requirements.txt
 
-COPY . ./
+# COPY . ./
 
 EXPOSE 8080
 
+#execute during container creation
 ENTRYPOINT ["python3", "app.py"]
