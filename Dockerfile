@@ -18,7 +18,7 @@ RUN pip install -r requirements.txt
 
 # COPY . ./
 
-EXPOSE 8080
+EXPOSE 8989
 
 #execute during container creation
 ENTRYPOINT ["python3", "app.py"]
